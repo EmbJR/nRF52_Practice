@@ -1,0 +1,4 @@
+1. Copy the core dump from the line with #CD:BEGIN to the end of line with #CD:END# from the terminal window and save it as dump.log and place in current folder.
+2. Copy the output .elf file from the application code rename it as "zephyr.elf" and place in the current folder.
+3. Run the script "Run_dbg_script.cmd", it will start the GDB server.
+4. Run the script "Connect server.cmd". It will show the backtrace output.
