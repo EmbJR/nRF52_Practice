@@ -1,0 +1,10 @@
+identifier: Jaydeep_Custom/nrf52832
+name: Jaydeep_Custome1
+vendor: Nordic
+type: mcu
+arch: arm
+ram: 64
+flash: 512
+toolchain:
+  - zephyr
+supported: []
