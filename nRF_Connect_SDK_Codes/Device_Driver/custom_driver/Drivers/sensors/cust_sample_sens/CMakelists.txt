@@ -1,0 +1,2 @@
+Zephyr_library()
+Zephyr_library_sources(cust_sampl.c)
