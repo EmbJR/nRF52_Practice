@@ -1,6 +1,0 @@
-config CUSTOM_DRIVER
-    bool "Custom Driver Sample"
-    depends on DT_HAS_ZEPHYR_CUSTOM_DRIVER_ENABLED
-    select SPI
-    help
-        Enable custome drivers sample

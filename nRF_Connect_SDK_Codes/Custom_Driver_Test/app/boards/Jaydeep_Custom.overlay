@@ -11,7 +11,7 @@
 	cs-gpios = <&gpio0 30 GPIO_ACTIVE_LOW>;
 
 /* STEP 8.3 Create JBR node */
-	JBR1: jbr@0 {
+	jbr: jbr@0 {
 		compatible = "zephyr,custom-jbr";
 		reg = <0>;
 		spi-max-frequency = <1000000>; 

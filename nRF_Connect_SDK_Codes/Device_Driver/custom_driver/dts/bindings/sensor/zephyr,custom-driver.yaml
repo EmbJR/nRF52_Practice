@@ -1,6 +1,0 @@
-# STEP 1: Create a binding file for the custom driver
-description: Driver integrated environmental sensor
-
-compatible: "zephyr,custom-driver"
-
-include: [sensor-device.yaml, spi-device.yaml]
