@@ -10,7 +10,7 @@
  LOG_MODULE_REGISTER(Lesson7_Exercise1, LOG_LEVEL_INF);
  
  /* STEP 9.1 - Get the device structure from the node label */
- const struct device * dev = DEVICE_DT_GET(DT_NODELABEL(bme280));
+ const struct device * dev = DEVICE_DT_GET(DT_NODELABEL(JBR1));
  
  int main(void)
  {
@@ -26,7 +26,7 @@
          LOG_INF("Error: SPI device is not ready, err: %d", err);
          return 0;
      }
- 
+ #if 0
      while (1) {
          /* STEP 9.3 - Continuously read out sensor data using the sensor API calls */
          err = sensor_sample_fetch(dev);
@@ -56,6 +56,19 @@
          
          k_sleep(K_MSEC(1000));
      }
+     #endif
      
      return 0;
  }
+
+
+#if 0
+ #include <zephyr/kernel.h>
+ #include <zephyr/drivers/sensor.h>
+ #include <zephyr/logging/log.h>
+
+int main(void)
+ {
+    while(1);
+ }
+ #endif

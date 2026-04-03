@@ -15,7 +15,7 @@ LOG_MODULE_REGISTER(PWM_Test, LOG_LEVEL_INF);
 /* 1000 msec = 1 sec */
 #define SLEEP_TIME_MS   500
 
-#define SERVO_MOTOR     DT_NODELABEL(servo) 
+#define SERVO_MOTOR     DT_NODELABEL(servo2) 
 static const struct pwm_dt_spec pwm_servo = PWM_DT_SPEC_GET(SERVO_MOTOR);
 
 #define PWM_SERVO_MIN_PULSE_WIDTH  DT_PROP(SERVO_MOTOR, min_pulse)

@@ -1,7 +1,7 @@
 #STEP 6.2 Populate the Kconfig file for the custom driver
-config CUSTOM_BME280
-	bool "Custom BME280 sensor"
-	depends on DT_HAS_ZEPHYR_CUSTOM_BME280_ENABLED
+config CUSTOM_JBR
+	bool "Custom JBR sensor"
+	depends on DT_HAS_ZEPHYR_CUSTOM_JBR_ENABLED
 	select SPI
 	help
 	  Enable custom BME280 driver

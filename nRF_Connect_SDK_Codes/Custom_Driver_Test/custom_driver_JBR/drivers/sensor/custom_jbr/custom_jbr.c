@@ -12,7 +12,7 @@
 #include <zephyr/drivers/sensor.h>
 
 /* STEP 2.1 - Define the driver compatible from the custom binding */
-#define DT_DRV_COMPAT zephyr_custom_bme280
+#define DT_DRV_COMPAT zephyr_custom_jbr
 
 LOG_MODULE_REGISTER(custom_bme280, CONFIG_SENSOR_LOG_LEVEL);
 
@@ -87,7 +87,7 @@ struct custom_bme280_data {
 struct custom_bme280_config {
     struct spi_dt_spec spi;
 };
-
+#if 1
 int bme280_reg_read(const struct device *dev,
                   uint8_t reg, uint8_t *data, int size)
 {
@@ -403,7 +403,7 @@ static int custom_bme280_init(const struct device *dev)
 }
 
 /* STEP 5.1 - Define macro with device drivers structures */
-#define CUSTOM_BME280_DEFINE(inst)                                              \
+#define CUSTOM_JBR_DEFINE(inst)                                              \
     static struct custom_bme280_data custom_bme280_data_##inst;                 \
     static const struct custom_bme280_config custom_bme280_config_##inst = {    \
         .spi = SPI_DT_SPEC_INST_GET(inst, SPIOP, 0),                            \
@@ -419,4 +419,5 @@ static int custom_bme280_init(const struct device *dev)
                 &custom_bme280_api);
 
 /* STEP 5.3 - Create the struct device for every status "okay" node in the devicetree */
-DT_INST_FOREACH_STATUS_OKAY(CUSTOM_BME280_DEFINE)
+DT_INST_FOREACH_STATUS_OKAY(CUSTOM_JBR_DEFINE)
+#endif
