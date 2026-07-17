@@ -1,0 +1,54 @@
+# Git ignore file for nRF52832 project
+
+# Build artifacts
+/build/
+/cmake-build-*/
+*.o
+*.a
+*.elf
+*.bin
+*.hex
+*.map
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Zephyr/West
+.west/
+modules/
+zephyr/
+fw/
+
+# Editor backups
+*.bak
+*.backup
+.project
+.cproject
+.settings/
+
+# OS files
+*.exe
+*.dll
+*.so
+*.dylib
+.DS_Store
+Thumbs.db
